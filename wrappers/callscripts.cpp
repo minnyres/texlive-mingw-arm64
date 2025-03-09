@@ -95,6 +95,7 @@ int main(int argc, char* argv[])
 		+ texmf_dist_path.string() + "/../tlpkg/tlgs/bin";
 
 	putenv(env_path_string.c_str());
+	putenv("PROCESSOR_ARCHITEW6432=");
 
 	return _spawnvp(_P_WAIT, argv_to_pass[0], (const char* const*)argv_to_pass);
 }
